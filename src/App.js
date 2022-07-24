@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     setAppState({loading: true});
-    const apiUrl = `https://api.github.com/users/viraj-2393/repos`;
+    const apiUrl = `https://api.github.com/users/hacktivist123/repos`;
 
     Axios.get(apiUrl).then((response) =>{
        const allRepos = response.data;
