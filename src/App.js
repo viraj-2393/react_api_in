@@ -30,15 +30,7 @@ function App() {
     <div className='repo-container'>
       <ListLoading isLoading={appState.loading} repos={appState.repos} />
     </div>
-    <footer>
-      <div className='footer'>
-        Built with {' '}
-        <span role='img' aria-label='love'>
-          💚
-        </span>{' '}
-         by Viraj
-      </div>
-    </footer>
+
   </div>
   );
 }
