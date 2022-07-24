@@ -1,4 +1,4 @@
-
+import Axios from 'axios';
 import './App.css';
 import WithListLoading from './component/withloadinglist';
 import List from './component/list';
@@ -14,11 +14,12 @@ function App() {
   useEffect(() => {
     setAppState({loading: true});
     const apiUrl = `https://api.github.com/users/viraj-2393/repos`;
-    fetch(apiUrl)
-    .then((res) => res.json())
-    .then((repos) => {
-      setAppState({loading:false,repos: repos});
+
+    Axios.get(apiUrl).then((response) =>{
+       const allRepos = response.data;
+       setAppState({loading:false, repos: allRepos});
     });
+    
   },[setAppState]);
 
   return (
